@@ -9,6 +9,8 @@ spec:
     repoURL: https://github.com/asad-abdullah/guestbook-test.git
     targetRevision: HEAD
     path: deployment
+    plugin:
+      name: argocd-vault-plugin
   destination:
     server: https://kubernetes.default.svc
     namespace: default
