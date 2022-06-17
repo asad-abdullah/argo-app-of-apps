@@ -18,3 +18,14 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+        env:
+        - name: GUESTBOOK_UI
+          valueFrom:
+            configMapKeyRef:
+              name: guestbook-ui-config
+              key: db.url
+        - name: GUESTBOOK_UI_SEC
+          valueFrom:
+            secretKeyRef:
+              name: guestbook-ui-secret
+              key: db.username
