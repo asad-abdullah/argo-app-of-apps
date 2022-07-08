@@ -9,17 +9,8 @@ spec:
     repoURL: https://github.com/asad-abdullah/guestbook-test.git
     targetRevision: HEAD
     path: deployment
-    # plugin:
-    #   name: argocd-vault-plugin
-    #   env:
-    #     - name: AVP_TYPE
-    #       value: vault
-    #     - name: VAULT_ADDR
-    #       value: 'https://stg-vault.apigate.com'
-    #     - name: AVP_AUTH_TYPE
-    #       value: approle
-    #     - name: AVP_SECRET_ID
-    #       value: bcf94787-c455-1ce8-68b1-79c44d167fe3
+    plugin:
+      name: argocd-vault-plugin
   destination:
     server: https://kubernetes.default.svc
     namespace: default
