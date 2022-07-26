@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/asad-abdullah/argo-app-of-apps.git
     targetRevision: HEAD
-    path: guestbook-ui-2/deployment/staging
+    path: guestbook-ui-2/staging
     plugin:
       name: argocd-vault-plugin
   destination:
