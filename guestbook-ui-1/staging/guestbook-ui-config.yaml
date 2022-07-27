@@ -6,5 +6,5 @@ metadata:
   labels:
     app.kubernetes.io/name: guestbook-ui-1
 data:
-  db.url: "test"
+  db.url: "test_reloader"
   db.env: "test"
