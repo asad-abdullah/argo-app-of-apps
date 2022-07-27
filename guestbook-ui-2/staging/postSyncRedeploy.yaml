@@ -6,16 +6,16 @@ metadata:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
-backoffLimit: 1
-template:
-  spec:
-    containers:
-      - command:
-          - echo "RUNNING SOME SCAN"
-        env:
-          - name: VAULT_ADDR
-            value: 'https://stg-vault.example.com'
-        image: 'bash'
-        imagePullPolicy: Always
-        name: rollout-deployment
-    restartPolicy: Never
+  backoffLimit: 1
+  template:
+    spec:
+      containers:
+        - command:
+            - echo "RUNNING SOME SCAN"
+          env:
+            - name: VAULT_ADDR
+              value: 'https://stg-vault.example.com'
+          image: 'bash'
+          imagePullPolicy: Always
+          name: rollout-deployment
+      restartPolicy: Never
