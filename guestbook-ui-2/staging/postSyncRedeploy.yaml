@@ -11,12 +11,13 @@ spec:
     spec:
       containers:
         - command:
-            - bash
-            - echo "RUNNING SOME SCAN"
+            - zap-full-scan.py
+            - -t
+            - https://www.example.com
           env:
             - name: VAULT_ADDR
               value: 'https://stg-vault.example.com'
-          image: 'bash'
+          image: 'owasp/zap2docker-stable'
           imagePullPolicy: Always
           name: rollout-deployment
       restartPolicy: Never
