@@ -9,8 +9,8 @@ spec:
     repoURL: https://github.com/asad-abdullah/argo-app-of-apps.git
     targetRevision: HEAD
     path: guestbook-ui-1/staging
-    plugin:
-      name: argocd-vault-plugin
+    # plugin:
+    #   name: argocd-vault-plugin
   destination:
     server: https://kubernetes.default.svc
     namespace: default
